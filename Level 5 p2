@@ -1,3 +1,4 @@
+#This program is to read a program
 import cv2
 img = cv2.imread('Itachi_Uchiha.jpg')
 cv2.imshow('Output',img)
