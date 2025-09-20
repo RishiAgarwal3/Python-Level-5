@@ -1,0 +1,5 @@
+#enumerate
+word = "My name is Rishi Agarwal"
+for index, char in enumerate(word):
+    print(index,char)
+print (enumerate(word))
