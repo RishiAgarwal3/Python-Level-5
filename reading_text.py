@@ -3,6 +3,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/Cellar/tesseract/5.5.1/bin/tesseract"
 
 img = cv2.imread("Screenshot 2025-07-31 at 7.10.59 PM.png")
+
 h,w,_ = img.shape
 boxes = pytesseract.image_to_boxes((img))
 print (boxes)
