@@ -1,4 +1,3 @@
-#hsdhhhsdkfd
 import cv2
 import pytesseract
 pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/Cellar/tesseract/5.5.1/bin/tesseract"
