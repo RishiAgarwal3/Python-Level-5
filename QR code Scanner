@@ -1,0 +1,19 @@
+import cv2
+img = cv2.imread("adobe-express-qr-code-2.png")
+
+qr_detector = cv2.QRCodeDetector()
+
+mydata,points,_ = qr_detector.detectAndDecode(img)
+if mydata :
+    print(mydata)
+print(points)
+
+if points is not None :
+    points = points.reshape((-1,1,2)).astype(int)
+
+cv2.polylines(img,[points],True,(0,255,255),5)
+x,y = points[0][0]
+cv2.putText(img,mydata,(x+10,y+10),cv2.FONT_HERSHEY_COMPLEX,0.65,(234,194,57),2)
+cv2.imshow("qrcode",img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
